@@ -136,4 +136,32 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
+
+    <build>
+
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <!--Maven编译过后war包的名字-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <configuration>
+                    <warName>testci</warName>
+                </configuration>
+            </plugin>
+        </plugins>
+        <resources>
+            <!--<resource>
+                <directory>src/main/resources</directory>
+                <excludes>
+                    <exclude>dev/*</exclude>
+                    <exclude>prod/*</exclude>
+                </excludes>
+                &lt;!&ndash;  <filtering>true</filtering>   &ndash;&gt;
+            </resource>-->
+        </resources>
+    </build>
 </project>
