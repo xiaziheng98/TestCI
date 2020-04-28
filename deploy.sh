@@ -13,7 +13,7 @@ killTomcat()
         kill -9 "${pid}"
     fi
 }
-cd $PROJ_PATH/
+cd $PROJ_PATH/test-ci/
 mvn clean install
 #杀死Tomcat
 #killTomcat
