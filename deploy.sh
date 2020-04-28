@@ -16,19 +16,19 @@ killTomcat()
 cd $PROJ_PATH/test-ci/
 mvn clean install
 #杀死Tomcat
-#killTomcat
+killTomcat
 
 #删除原有工程
-#rm -rf $TOMCAT_APP_PATH/webapps/ROOT
-#rm -f $TOMCAT_APP_PATH/webapps/ROOT.war
-#rm -f $TOMCAT_APP_PATH/webapps/test-ci.war
+rm -rf $TOMCAT_APP_PATH/webapps/ROOT
+rm -f $TOMCAT_APP_PATH/webapps/ROOT.war
+rm -f $TOMCAT_APP_PATH/webapps/testci.war
 
 #复制新的工程
-#cp $PROJ_PATH/target/test-ci.war $TOMCAT_APP_PATH/webapps/
-#
-#cd $TOMCAT_APP_PATH/webapps/
-#mv test-ci.war ROOT.war
+cp $PROJ_PATH/target/testci.war $TOMCAT_APP_PATH/webapps/
+
+cd $TOMCAT_APP_PATH/webapps/
+mv testci.war ROOT.war
 
 #启动tomcat
-#cd $TOMCAT_APP_PATH/
-#sh bin/startup.sh
+cd $TOMCAT_APP_PATH/
+sh bin/startup.sh
