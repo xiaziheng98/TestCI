@@ -9,6 +9,6 @@ public class HelloController {
     @GetMapping("/hello")
     public Object hello() {
         System.out.println("hello, console");
-        return "hello, test update to CI";
+        return "hello, test update to CI 2";
     }
 }
