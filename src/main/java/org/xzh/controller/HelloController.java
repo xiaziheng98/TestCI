@@ -18,6 +18,12 @@ public class HelloController {
         return "hello, test update to CI 2";
     }
 
+    /**
+     * 获取post  body里的内容
+     * @param request
+     * @return
+     * @throws IOException
+     */
     @PostMapping("/hook")
     public Object hook(HttpServletRequest request) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(request.getInputStream()));
